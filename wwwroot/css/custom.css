@@ -1,0 +1,201 @@
+:root{
+    --border-color: #eee;
+}
+.logo{
+    height: 40px;
+}
+.up-header{
+    box-shadow: 0 .5px #ccc;
+    padding: 5px 0;
+}
+.up-header span{
+    margin-right: 20px;
+}
+.bottom-header{
+    padding: 5px;
+}
+.menu-item{
+    list-style: none;
+    padding: 15px;
+}
+.menu-item:last-child{
+    padding-right: 0;
+}
+.menu-item a,
+.menu-item a:visited{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu-item a:hover{
+    color: #43afde;
+    transition: all .3s;
+}
+
+#box-hero{
+    height: 100vh;
+    color: #fff;
+    background-image: linear-gradient(45deg,rgba(67, 175, 222, .9),rgba(166, 72, 196,.9)), url("/images/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    
+}
+.hero-box{
+    margin-top: 33vh;
+}
+.hero-box h1{
+    font-size: 60px;
+}
+.box-services{
+    background-color: #f9f9f9;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.services-description,
+.services-boxes{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.service-box{
+    flex: 1;
+}
+.service-box:not(:last-child){
+    border-right: 1px #43afde dotted;
+}
+.service-box i{
+    font-size: 48px;
+    color: #43afde;
+}
+.service-box h4{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.service-box p{
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.call-to-action{
+    
+}
+.image-call-to-action,
+.call-to-action-description{
+    width: 50%;
+    box-sizing: border-box; 
+}
+.image-call-to-action{
+    background: url('/images/call_to_action.png') no-repeat center;
+    background-size: cover;
+}
+.call-to-action-description{
+    background: linear-gradient(45deg, #43afde, #a648c4);
+    color: #fff;
+    padding: 80px 120px;
+}
+.call-to-action-description h4{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.call-to-action-description p{
+    width: 70%;
+    font-size: 14px;
+}
+.call-to-action-description button{
+    margin-top: 20px;
+}
+.btn-principal{
+    padding: 15px 30px;
+    background-color: #00adef;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+}
+.btn-principal:hover{
+    background-color: #43afde;
+    transition: .3s all;
+}
+.footer{
+    padding: 50px 0 20px 0;
+    background-color: #2d3e50;
+    color:#fff;
+}
+.footer-copy{
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: .5px solid #384c61;
+}
+.portfolio{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.portfolio-header{
+    margin-bottom: 30px;
+}
+.portfolio h2{
+    margin-bottom: 0;
+}
+.portflio-slash{
+    margin-left: 15px;
+}
+.portfolio-menu{
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #aaa;
+    margin-bottom: 0;
+    padding-left: 5px;
+}
+.portfolio li{
+    padding-left:15px;
+    padding-right:15px;
+}
+.portfolio li a,.portfolio li a:visited, .portfolio li a:focus{
+    color: #aaa;
+    text-decoration: none;
+}
+.portfolio li a:hover{
+    color: #000;
+}
+.portfolio-item{
+    padding: 10px 10px 10px 0;
+}
+.portfolio-item img{
+    width: 100%;
+}
+.contact{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #f9f9f9;
+}
+.contact-box{
+    margin-top: 30px;
+}
+.contact-form{
+    padding-right: 30px;
+}
+.contact-form-group{
+    margin-bottom: 20px;
+}
+.contact-input{
+    width: 100%;
+    padding: 7px;
+}
+.contact-list{
+    padding-left: 30px;
+    
+}
+.contact-list i{
+    color: #00adef;
+    margin-right: 10px;
+}
+.contact-list img{
+    max-width: 100%;
+    /* height: 100px; */
+}
