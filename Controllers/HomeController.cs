@@ -23,7 +23,6 @@ namespace Website_TecSys_NetCore.Controllers
             ViewBag.Menus = menus;
             List<Conteudo> conteudosHeroBox = GetConteudos(1);
             ViewBag.ConteudosHeroBox = conteudosHeroBox;
-            ViewBag.ConteudosHeroBoxLength = conteudosHeroBox.Count();
             
             ConfiguracoesModel configs = GetConfigs();
             
@@ -46,6 +45,9 @@ namespace Website_TecSys_NetCore.Controllers
             configs.Email = dictionaryConfig["email"];
             configs.Endereco = dictionaryConfig["endereco"];
 
+            ViewBag.Telefone = dictionaryConfig["telefone"];
+            ViewBag.Email = dictionaryConfig["email"];
+            ViewBag.Endereco = dictionaryConfig["endereco"];
             return configs;
         }
 

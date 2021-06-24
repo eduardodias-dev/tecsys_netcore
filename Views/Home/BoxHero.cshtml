@@ -2,28 +2,11 @@
     <div class="container box-hero-inner">
         @Html.Partial("Header")
         <div class="hero-box">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                
-                <div class="carousel-inner">
-                    @{
-                        int count = 0;
-                        foreach(Conteudo conteudo in ViewBag.ConteudosHeroBox){
-                            if(count == 0){
-                                <div class="carousel-item active">
-                                    <h1>@conteudo.Titulo</h1>
-                                </div>
-                                count = 1;
-                            }else{
-                                <div class="carousel-item ">
-                                    <h1>@conteudo.Titulo</h1>
-                                </div>
-                            }
-                        }
-                    }
-                    
-                </div>
-                
-            </div>
+            @foreach(var conteudo in ViewBag.ConteudosHeroBox){
+                <h1 class="hero-content">@conteudo.Titulo</h1>
+                <p>@conteudo.Descricao</p>
+            }
         </div>
     </div>
 </nav>
+

@@ -209,3 +209,6 @@
     opacity: 1;
     transition: all .5s;
 }
+.hero-content:not(:first-child){
+    display: none;
+}
