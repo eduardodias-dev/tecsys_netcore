@@ -21,13 +21,11 @@ namespace Website_TecSys_NetCore.Controllers
         {
             List<string> menus = new List<string>{"Home", "Serviços", "Portfolio", "Fale Conosco"};
             ViewBag.Menus = menus;
-            var list = _context.Configuracoes.ToList();
-            var dictionaryConfig = list.ToDictionary(x => x.Chave.ToLower(), y => y.Valor);
-            ConfiguracoesModel configs = new ConfiguracoesModel();
-
-            configs.Telefone = dictionaryConfig["telefone"];
-            configs.Email = dictionaryConfig["email"];
-            configs.Endereco = dictionaryConfig["endereco"];
+            List<Conteudo> conteudosHeroBox = GetConteudos(1);
+            ViewBag.ConteudosHeroBox = conteudosHeroBox;
+            ViewBag.ConteudosHeroBoxLength = conteudosHeroBox.Count();
+            
+            ConfiguracoesModel configs = GetConfigs();
             
             return View(configs);
         }
@@ -36,6 +34,25 @@ namespace Website_TecSys_NetCore.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private ConfiguracoesModel GetConfigs(){
+            
+            var list = _context.Configuracoes.ToList();
+            var dictionaryConfig = list.ToDictionary(x => x.Chave.ToLower(), y => y.Valor);
+            ConfiguracoesModel configs = new ConfiguracoesModel();
+
+            configs.Telefone = dictionaryConfig["telefone"];
+            configs.Email = dictionaryConfig["email"];
+            configs.Endereco = dictionaryConfig["endereco"];
+
+            return configs;
+        }
+
+        private List<Conteudo> GetConteudos(int secaoId){
+            List<Conteudo> conteudos = _context.Conteudos.Where(x => x.SecaoId == secaoId).ToList();
+
+            return conteudos;
         }
     }
 

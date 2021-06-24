@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eduardo.dias\\Documents\\Projetos\\Website-TecSys-NetCore\\Website-TecSys-NetCore.csproj": {}
+    "D:\\Projetos Dev\\tecsys_netcore\\Website-TecSys-NetCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eduardo.dias\\Documents\\Projetos\\Website-TecSys-NetCore\\Website-TecSys-NetCore.csproj": {
+    "D:\\Projetos Dev\\tecsys_netcore\\Website-TecSys-NetCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduardo.dias\\Documents\\Projetos\\Website-TecSys-NetCore\\Website-TecSys-NetCore.csproj",
+        "projectUniqueName": "D:\\Projetos Dev\\tecsys_netcore\\Website-TecSys-NetCore.csproj",
         "projectName": "Website-TecSys-NetCore",
-        "projectPath": "C:\\Users\\eduardo.dias\\Documents\\Projetos\\Website-TecSys-NetCore\\Website-TecSys-NetCore.csproj",
-        "packagesPath": "C:\\Users\\eduardo.dias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduardo.dias\\Documents\\Projetos\\Website-TecSys-NetCore\\obj\\",
+        "projectPath": "D:\\Projetos Dev\\tecsys_netcore\\Website-TecSys-NetCore.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos Dev\\tecsys_netcore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\eduardo.dias\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
