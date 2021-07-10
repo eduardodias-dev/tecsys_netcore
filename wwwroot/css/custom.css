@@ -108,7 +108,7 @@
     margin-top: 20px;
 }
 .btn-principal{
-    padding: 15px 30px;
+    padding: 10px 30px;
     background-color: #00adef;
     color: #fff;
     font-size: 16px;
@@ -211,4 +211,31 @@
 }
 .hero-content:not(:first-child){
     display: none;
+}
+
+.hide{
+    display:none;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: scale(1,1) translate(0px, 0px);
+    }
+
+    30% {
+        transform: scale(1,1) translate(0px, 10px);
+    }
+
+    75% {
+        transform: scale(1,1) translate(0px, -5px);
+    }
+
+    100% {
+        transform: scale(1,1) translate(0px, 0px);
+    }
+}
+
+.bounce {
+    margin-top: 300px;
+    -webkit-animation: bounce 1s infinite;
 }

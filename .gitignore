@@ -387,3 +387,5 @@ FodyWeavers.xsd
 .idea/
 *.sln.iml
 bin/Debug/net5.0/Website-TecSys-NetCore.dll
+/obj
+/bin

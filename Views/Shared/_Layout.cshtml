@@ -6,157 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"] | TecSys Tecnologia.</title>
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="~/lib/fontawesome/css/all.css" />
-    
     <!-- custom css -->
     <link rel="stylesheet" href="~/css/custom.css" />
-    <script src="~/lib/glider/glider.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="~/lib/glider/glider.css">
+    <!-- bundle -->
+    <link href="~/bundle.css" rel="stylesheet" />
+    <link href="~/lib/fontawesome/css/all.css" rel="stylesheet" />
+    <script src="~/bundle.js"></script>
+    <script src="~/js/site.js"></script>
 </head>
 <body>
     <div class="px-0">
         @RenderBody();
         
-        <main class="text-center container-fluid p-0">
-            <div class="box-services">
-                <div class="container">
-                    <div class="services-description">
-                        <h2>Serviços para ajudar seu negócio!</h2>
-                        <p>
-                            Desenvolvemos soluções para ajudar e alavancar seu negócio, com o máximo de respeito ao orçamento e comprometimento com seu projeto! Entre em contato conosco!
-                        </p>
-                    </div>
-                    <div class="services-boxes d-flex justify-content-between align-items-baseline">
-                        <div class="service-box">
-                            <i class="fa fa-window-restore"></i>
-                            <h4>Sites e Sistemas</h4>
-                            <p>
-                                Desenvolvimento de sites e sistemas sob-demanda voltados para a necessidade do negócio.
-                            </p>
-                        </div>
-                        <div class="service-box">
-                            <i class="fab fa-wordpress-simple"></i>
-                            <h4>Desenvolvimento WordPress</h4>
-                            <p>
-                                Desenvolvimento de Sites e lojas virtuais personalizadas utilizando WordPress e Woocommerce.
-                            </p>
-                        </div>
-                        <div class="service-box">
-                            <i class="fa fa-tools"></i>
-                            <h4>Manutenção de Sistemas</h4>
-                            <p>
-                                Manutenção de sistemas existentes, desenvolvimento de novos módulos e correção de bugs.
-                            </p>
-                        </div>
-                        <div class="service-box">
-                            <i class="fa fa-globe"></i>
-                            <h4>Hospedagem de sites</h4>
-                            <p>
-                                Hospedagem de sites personalizada para o projeto do cliente.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="call-to-action d-flex text-left">
-                <div class="image-call-to-action">
-                </div>
-                <div class="call-to-action-description">
-                    <h4>Serviços Personalizados pra você!</h4>
-                    <p>
-                        Nem sempre o cliente sabe tudo que a tecnologia pode fazer para ajudar seu negócio, por isso, estamos aqui para ajudar você a encontrar a melhor solução para o que você precisa.
-                    </p>
-                    <p>
-                        Deixe nos ajudar a personalizar uma solução pra você!
-                    </p>
-                    <button class="btn-principal">Quero saber mais!</button>
-                </div>
-            </div>
-            <div class="portfolio container text-left">
-                <div class="portfolio-header d-flex align-items-center">
-                    <h2>Portfolio</h2> <h2 class="portflio-slash">/</h2>
-                    <ul class="portfolio-menu d-flex align-items-center">
-                        <li class="portfolio-category"><a href="#" >Sites</a></li>
-                        <li class="portfolio-category"><a href="#" >Sistemas</a></li>
-                        <li class="portfolio-category"><a href="#" >Lojas Virtuais</a></li>
-                    </ul>
-                </div>
-                <div class="portfolio-box d-flex flex-wrap">
-                    <div class="portfolio-item col-4">
-                        <img src="~/images/image-not-found.png"/>
-                    </div>
-                    <div class="portfolio-item col-4 ">
-                        <img src="~/images/image-not-found.png"/>
-                    </div>
-                    <div class="portfolio-item col-4 ">
-                        <img src="~/images/image-not-found.png"/>
-                    </div>
-                    <div class="portfolio-item col-4 ">
-                        <img src="~/images/image-not-found.png"/>
-                    </div>
-                    <div class="portfolio-item col-4 ">
-                        <img src="~/images/image-not-found.png"/>
-                    </div>
-                    <div class="portfolio-item col-4 ">
-                        <img src="~/images/image-not-found.png"/>
-                    </div>
-                    <div class="portfolio-item col-4 ">
-                        <img src="~/images/image-not-found.png"/>
-                    </div>
-                    <div class="portfolio-item col-4 ">
-                        <img src="~/images/image-not-found.png"/>
-                    </div>
-                    <div class="portfolio-item col-4 ">
-                        <img src="images/image-not-found.png"/>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="" style="min-height: 300px;">
-                <h1>Time</h1>
-            </div> -->
-            <div class="contact text-left">
-                <div class="container">
-                    <h2>Fale com a gente!</h2>
-                    <p>
-                        Queremos entender qual a sua necessidade para trazermos a melhor solução. Fale com a gente aqui!
-                    </p>
-                    <div class="contact-box d-flex justify-content-center">
-                        <form action="" class="contact-form w-50">
-                            <div class="contact-form-group">
-                                <input type="text" name="nome" class="contact-input" placeholder="Nome..." />
-                            </div>
-                            <div class="contact-form-group">
-                                <input type="email" name="email" class="contact-input" placeholder="E-mail..." />
-                            </div>
-                            <div class="contact-form-group">
-                                <input type="text" name="subject" class="contact-input" placeholder="Assunto..." />
-                            </div>
-                            <div class="contact-form-group">
-                                <textarea name="message" rows="5" class="contact-input" placeholder="Mensagem..."></textarea>
-                            </div>
-                            <button class="btn-principal" type="submit">Enviar</button>
-                        </form>
-                        <div class="contact-list w-50">
-                            <p>
-                                <i class="fa fa-phone-alt"></i> @ViewBag.Telefone
-                            </p>
-                            <p>
-                                <i class="fa fa-envelope"></i> @ViewBag.Email
-                            </p>
-                            <p>
-                                <i class="fa fa-map-marker-alt"></i> @ViewBag.Endereco
-                            </p>
-                            <img src="images/map.jpg" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
         <footer class="container-fluid text-center footer">
             <div class="container d-flex justify-content-between align-items-center">
                 <img src="/images/logo.png" class="logo" />
@@ -185,9 +46,6 @@
             </div>
         </footer>
     </div>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="~/js/site.js"></script>
+    
 </body>
 </html>

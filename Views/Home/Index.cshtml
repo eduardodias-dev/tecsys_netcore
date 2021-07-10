@@ -1,4 +1,110 @@
 ﻿@{
     ViewData["Title"] = "Bem Vindo!";
 }
-@Html.Partial("BoxHero");
+@Html.Partial("BoxHero")
+<main class="text-center container-fluid p-0">
+    <div class="box-services">
+        <div class="container">
+            <div class="services-description">
+                <h2>Serviços para ajudar seu negócio!</h2>
+                <p>
+                    Desenvolvemos soluções para ajudar e alavancar seu negócio, com o máximo de respeito ao orçamento e comprometimento com seu projeto! Entre em contato conosco!
+                </p>
+            </div>
+            <div class="services-boxes d-flex justify-content-between align-items-baseline">
+                <div class="service-box">
+                    <i class="fa fa-window-restore"></i>
+                    <h4>Sites e Sistemas</h4>
+                    <p>
+                        Desenvolvimento de sites e sistemas sob-demanda voltados para a necessidade do negócio.
+                    </p>
+                </div>
+                <div class="service-box">
+                    <i class="fab fa-wordpress-simple"></i>
+                    <h4>Desenvolvimento WordPress</h4>
+                    <p>
+                        Desenvolvimento de Sites e lojas virtuais personalizadas utilizando WordPress e Woocommerce.
+                    </p>
+                </div>
+                <div class="service-box">
+                    <i class="fa fa-tools"></i>
+                    <h4>Manutenção de Sistemas</h4>
+                    <p>
+                        Manutenção de sistemas existentes, desenvolvimento de novos módulos e correção de bugs.
+                    </p>
+                </div>
+                <div class="service-box">
+                    <i class="fa fa-globe"></i>
+                    <h4>Hospedagem de sites</h4>
+                    <p>
+                        Hospedagem de sites personalizada para o projeto do cliente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="call-to-action d-flex text-left">
+        <div class="image-call-to-action">
+        </div>
+        <div class="call-to-action-description">
+            <h4>Serviços Personalizados pra você!</h4>
+            <p>
+                Nem sempre o cliente sabe tudo que a tecnologia pode fazer para ajudar seu negócio, por isso, estamos aqui para ajudar você a encontrar a melhor solução para o que você precisa.
+            </p>
+            <p>
+                Deixe nos ajudar a personalizar uma solução pra você!
+            </p>
+            <button class="btn-principal">Quero saber mais!</button>
+        </div>
+    </div>
+    @Html.Partial("../Contact/Contact", new Website_TecSys_NetCore.Application.Models.ContactFormModel())
+    @{
+        if(false)
+        {
+            <div class="portfolio container text-left">
+                <div class="portfolio-header d-flex align-items-center">
+                    <h2>Portfolio</h2> <h2 class="portflio-slash">/</h2>
+                    <ul class="portfolio-menu d-flex align-items-center">
+                        <li class="portfolio-category"><a href="#">Sites</a></li>
+                        <li class="portfolio-category"><a href="#">Sistemas</a></li>
+                        <li class="portfolio-category"><a href="#">Lojas Virtuais</a></li>
+                    </ul>
+                </div>
+                <div class="portfolio-box d-flex flex-wrap">
+                    <div class="portfolio-item col-4">
+                        <img src="~/images/image-not-found.png" />
+                    </div>
+                    <div class="portfolio-item col-4 ">
+                        <img src="~/images/image-not-found.png" />
+                    </div>
+                    <div class="portfolio-item col-4 ">
+                        <img src="~/images/image-not-found.png" />
+                    </div>
+                    <div class="portfolio-item col-4 ">
+                        <img src="~/images/image-not-found.png" />
+                    </div>
+                    <div class="portfolio-item col-4 ">
+                        <img src="~/images/image-not-found.png" />
+                    </div>
+                    <div class="portfolio-item col-4 ">
+                        <img src="~/images/image-not-found.png" />
+                    </div>
+                    <div class="portfolio-item col-4 ">
+                        <img src="~/images/image-not-found.png" />
+                    </div>
+                    <div class="portfolio-item col-4 ">
+                        <img src="~/images/image-not-found.png" />
+                    </div>
+                    <div class="portfolio-item col-4 ">
+                        <img src="images/image-not-found.png" />
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="" style="min-height: 300px;">
+                <h1>Time</h1>
+            </div> -->
+        }
+    }
+
+
+</main>

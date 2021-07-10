@@ -1,0 +1,105 @@
+﻿@model Website_TecSys_NetCore.Application.Models.ContactFormModel
+
+<div class="contact text-left">
+    <div class="container">
+        <h2>Fale com a gente!</h2>
+        <p>
+            Queremos entender qual a sua necessidade para trazermos a melhor solução. Fale com a gente aqui!
+        </p>
+        <div class="contact-box d-flex justify-content-center">
+            <form asp-controller="Contact" asp-action="Contact" data-ajax="true" data-ajax-method="POST" class="contact-form w-50" id="form-contact">
+                <div class="contact-form-group">
+                    <input type="text" name="name" asp-for="Name" class="contact-input" placeholder="Nome..." />
+                </div>
+                <div class="contact-form-group">
+                    <input type="email" name="email" asp-for="Email" class="contact-input" placeholder="E-mail..." />
+                </div>
+                <div class="contact-form-group">
+                    <input type="text" name="subject" asp-for="Subject" class="contact-input" placeholder="Assunto..." />
+                </div>
+                <div class="contact-form-group">
+                    <textarea name="message" asp-for="Message" rows="5" class="contact-input" placeholder="Mensagem..."></textarea>
+                </div>
+                <button class="btn-principal" type="submit">Enviar</button>
+            </form>
+            <div class="contact-list w-50">
+                <p>
+                    <i class="fa fa-phone-alt"></i> @ViewBag.Telefone
+                </p>
+                <p>
+                    <i class="fa fa-envelope"></i> @ViewBag.Email
+                </p>
+                <p>
+                    <i class="fa fa-map-marker-alt"></i> @ViewBag.Endereco
+                </p>
+                <img src="images/map.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalConfirmContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h5 class="sendingEmail">
+                    <i class="fa fa-sync-alt fa-spin text-success"></i>
+                    Enviando e-mail de contato...
+                </h5>
+                <h5 class="succededEmail hide">
+                    <i class="fa fa-check text-success"></i>
+                    <span class="responseMessage"></span>
+                </h5>
+                <h5 class="errorEmail hide">
+                    <i class="fa fa-times text-danger"></i>
+                    <span class="responseMessage"></span><br />
+                    <button class="btn-principal mt-2" id="tryAgainButton" type="button">Tentar Novamente</button>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $form = $("#form-contact");
+
+        $form.submit(function (e) {
+            e.preventDefault();
+
+            $('#modalConfirmContact').modal('show');
+
+            $('.sendingEmail').removeClass('hide');
+            $('.errorEmail').addClass('hide');
+            $('.succededEmail').addClass('hide');
+            $.ajax({
+                url: $form.attr('action'),
+                method: 'post',
+                data: $form.serialize(),
+                dataType: 'json'
+            }).done(function (data) {
+                
+                $('.responseMessage').html(data);
+                $('.succededEmail').removeClass('hide');
+                $('.errorEmail').addClass('hide');
+
+                $("#form-contact")[0].reset();
+
+                setTimeout(function () {
+                    $('#modalConfirmContact').modal('hide');
+                }, 3000)
+
+            }).fail(function (err) {
+                $('.responseMessage').html(err.responseText);
+                $('.errorEmail').removeClass('hide');
+                $('.succededEmail').addClass('hide');
+            }).always(function () {
+                $('.sendingEmail').addClass('hide');
+            });
+
+        });
+
+        $('#tryAgainButton').click(function () {
+            $('#form-contact').submit();
+        });
+    });
+</script>
